@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffdce8">
+  <title>Feliz cumpleaños, Lia 🐵💗</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="barra">
+  <a class="logo" href="#inicio" data-ir="inicio">🐵 Lia <span>♡</span></a>
+  <nav aria-label="Navegación principal">
+    <button class="nav-btn active" data-page="inicio">Inicio</button>
+    <button class="nav-btn" data-page="galeria">Galería</button>
+    <button class="nav-btn" data-page="juegos">Juegos</button>
+    <button class="nav-btn" data-page="mensajes">Mensajes</button>
+    <button class="nav-btn" data-page="musica">Música</button>
+    <button class="nav-btn" data-page="sorpresas">Sorpresas</button>
+    <button class="nav-btn" data-page="pregunta">Una pregunta 💗</button>
+  </nav>
+  <button id="temaBtn" class="boton-redondo" aria-label="Cambiar tema">🌙</button>
+</header>
+<main>
+  <section id="inicio" class="pagina activa" style="--fondo:url('imagenes/fondo-monito.jpg')">
+    <div class="portada">
+      <div class="portada-texto">
+        <p class="etiqueta">✦ UN DÍA MUY ESPECIAL ✦</p>
+        <h1>¡Feliz cumpleaños,<br><span>Lia!</span> 🎂</h1>
+        <p>Hoy es tu día y este pequeño mundo está lleno de monitos, gatitos, momentos divertidos y sorpresas preparadas especialmente para ti. 💗</p>
+        <button class="boton" data-ir="sorpresas">Abrir mis regalos 🎁</button>
+        <button class="boton claro" data-ir="galeria">Explorar 🐾</button>
+      </div>
+      <div class="mascotas"><span class="flotante">💗</span><span class="flotante">⭐</span><div class="mascotas-grandes">🐵 🌸</div><p>Un pequeño mundo para Lia ♡</p></div>
+    </div>
+    <div class="tarjeta seccion">
+      <h2>🎬 Reels para Lia</h2><p class="subtitulo">Dos videitos para sacarte una sonrisa.</p>
+      <div class="reels">
+        <article class="reel"><h3>Reel sorpresa 1 💗</h3><iframe src="https://www.instagram.com/reel/Dd11rDTRFRs/embed" title="Primer Reel para Lia" loading="lazy" allowfullscreen></iframe><a class="boton enlace" href="https://www.instagram.com/reel/Dd11rDTRFRs/" target="_blank" rel="noopener">Abrir en Instagram ↗</a></article>
+        <article class="reel"><h3>Reel sorpresa 2 🐵</h3><iframe src="https://www.instagram.com/reel/DekCyE-t6sg/embed" title="Segundo Reel para Lia" loading="lazy" allowfullscreen></iframe><a class="boton enlace" href="https://www.instagram.com/reel/DekCyE-t6sg/" target="_blank" rel="noopener">Abrir en Instagram ↗</a></article>
+      </div><p class="nota">Si Instagram no muestra algún video, puedes abrirlo directamente con su botón.</p>
+    </div>
+    <div class="tarjeta seccion reproductor">
+      <p class="etiqueta">🎧 UNA PLAYLIST PARA TI</p><h2>Las canciones de Lia</h2><p class="subtitulo">Elige una canción y disfruta. 💕</p>
+      <div class="cancion-actual"><div id="disco" class="disco">♫</div><div><h3 id="nombreCancion">Feliz cumpleaños</h3><p id="estadoCancion">Lista para reproducir</p></div></div>
+      <audio id="audio" controls preload="metadata">Tu navegador no admite audio.</audio>
+      <div class="controles"><button class="boton claro" id="anterior">⏮ Anterior</button><button class="boton" id="reproducir">▶ Reproducir</button><button class="boton claro" id="siguiente">Siguiente ⏭</button></div>
+      <div id="listaCanciones" class="lista-canciones"></div><p class="nota"></p>
+    </div>
+  </section>
+
+  <section id="galeria" class="pagina" style="--fondo:url('imagenes/monito-mueca.jpg')">
+    <div class="encabezado"><p class="etiqueta">🐵 TERNURA POR TODAS PARTES</p><h2>Galería de momentos graciosos</h2><p>Unas imágenes para alegrarte el día. 💗</p></div>
+    <div id="galeriaGrid" class="rejilla"></div>
+    <div class="tarjeta centrado"><img src="imagenes/fondo-monito.jpg" alt="Monito ilustrado con fondo rosa" class="imagen-galeria"><h3>La monita más coqueta 🐵</h3><p>Cuando te dicen que te portes bien, pero tú tienes otros planes.</p></div>
+    <div class="tarjeta centrado"><img src="imagenes/monito-mueca.jpg" alt="Monito haciendo una mueca" class="imagen-galeria"><h3>La cara que ponemos todos 😂</h3><p id="fraseAleatoria">Yo cuando digo que ya me voy a dormir y sigo despierta.</p><button id="nuevaFrase" class="boton">Otra frase 💗</button></div>
+    <div class="tarjeta centrado"><img src="imagenes/perrito.jpg" alt="Perrito con expresión graciosa" class="imagen-galeria"><h3>El perrito juzgón 🐶</h3><p>Yo escuchando el chisme y fingiendo que no me interesa.</p></div>
+  </section>
+
+  <section id="juegos" class="pagina" style="--fondo:url('imagenes/monito-mueca.jpg')">
+    <div class="encabezado"><p class="etiqueta">🎮 ¡VAMOS A JUGAR!</p><h2>La zona divertida</h2><p>Juega un ratito y desbloquea sonrisas.</p></div>
+    <div class="tarjeta"><h3>🐱 Memorama</h3><p>Encuentra las seis parejas de animales.</p><div id="memorama" class="memorama"></div><p id="estadoMemorama">Parejas: 0 de 6</p><button id="reiniciarMemorama" class="boton">Volver a jugar 🔄</button></div>
+    <div class="rejilla juegos-extra">
+      <div class="tarjeta"><h3>❓ Adivina el animal</h3><p id="preguntaAnimal">Tengo bigotes y digo miau. ¿Quién soy?</p><button class="boton respuesta" data-respuesta="gato">Gatito 🐱</button><button class="boton claro respuesta" data-respuesta="mono">Monito 🐵</button></div>
+      <div class="tarjeta"><h3>💗 Atrapa corazones</h3><p>Presiona el botón y atrapa cinco corazones.</p><p id="puntuacion">Corazones: 0 de 5</p><button id="atrapar" class="boton">¡Atrapar! 💖</button></div>
+      <div class="tarjeta"><h3>🎉 Lluvia de alegría</h3><p>Llena la pantalla de corazones y estrellitas.</p><button id="celebrar" class="boton">¡Celebrar a Lia!</button></div>
+    </div>
+  </section>
+
+  <section id="mensajes" class="pagina" style="--fondo:url('imagenes/perrito.jpg')">
+    <div class="encabezado"><p class="etiqueta">💌 PALABRAS BONITAS</p><h2>Cartitas para Lia</h2><p>Elige una carta para descubrir su mensaje.</p></div>
+    <div class="tarjeta"><div id="botonesCartas" class="botones-cartas"></div><div id="contenidoCarta" class="carta">💌 Selecciona una carta para comenzar.</div></div>
+  </section>
+
+  <section id="musica" class="pagina" style="--fondo:url('imagenes/fondo-monito.jpg')">
+    <div class="encabezado"><p class="etiqueta">🎵 MOMENTOS MUSICALES</p><h2>Música y canciones</h2><p>Encuentra una canción que combine con tu día.</p></div>
+    <div class="rejilla">
+      <div class="tarjeta"><h3>🎧 Busca tu canción</h3><p>Abre una búsqueda musical en YouTube.</p><input id="buscarMusica" type="text" placeholder="Escribe el nombre de una canción"><button id="buscarBtn" class="boton">Buscar ▶</button></div>
+      <div class="tarjeta"><h3>💗 Una dedicatoria</h3><p>Que cada canción de hoy te recuerde lo especial que eres y todas las cosas bonitas que mereces.</p><button id="dedicar" class="boton">Enviar cariño 💕</button></div>
+    </div>
+  </section>
+
+  <section id="sorpresas" class="pagina" style="--fondo:url('imagenes/perrito.jpg')">
+    <div class="encabezado"><p class="etiqueta">🎁 ALGO BONITO TE ESPERA</p><h2>Regalos para Lia</h2><p>Abre los seis regalos para descubrir el mensaje final.</p></div>
+    <div id="regalos" class="rejilla regalos">
+      <button class="regalo" data-regalo="0"><span>💌</span><b>Una cartita</b></button><button class="regalo" data-regalo="1"><span>🌟</span><b>Un cumplido</b></button><button class="regalo" data-regalo="2"><span>🔮</span><b>Tu suerte</b></button><button class="regalo" data-regalo="3"><span>🕯️</span><b>Un deseo</b></button><button class="regalo" data-regalo="4"><span>🫂</span><b>Un abrazo</b></button><button class="regalo" data-regalo="5"><span>🔐</span><b>Un secreto</b></button>
+    </div>
+    <div class="tarjeta centrado resultado-regalo"><div class="emoji-grande">🎂🐵🐶</div><h3 id="tituloRegalo">Tu sorpresa está esperando...</h3><p id="textoRegalo">Toca cada regalo para descubrir su mensaje.</p><button id="sorpresaFinal" class="boton" disabled>Desbloquear sorpresa final 🔒</button>
+      <div id="final" class="final oculto"><h2>¡Feliz cumpleaños, Lia! 💗</h2><p>Que tu vida esté llena de risas, aventuras, amistades bonitas, momentos inolvidables y muchísimos motivos para sonreír.</p><div class="emoji-grande">🎉🐱💖🐵🎂</div><button id="confetiFinal" class="boton">¡Más fiesta!</button></div>
+    </div>
+  </section>
+
+  <section id="pregunta" class="pagina" style="--fondo:url('imagenes/fondo-monito.jpg')">
+    <div class="encabezado"><p class="etiqueta">💗 UNA ÚLTIMA PREGUNTITA 💗</p><h2>Antes de que te vayas, Lia…</h2><p>Preparé todo esto con la intención de sacarte una sonrisa. 🌸</p></div>
+    <div class="tarjeta centrado pregunta-card"><img src="imagenes/monito-mueca.jpg" alt="Monito haciendo una mueca divertida" class="imagen-galeria"><div class="emoji-grande">🐵🌷💗</div><h2>Una pregunta…</h2><h3>¿Te gustó el edit que te hice? 💕</h3><p>Espero que te haya gustado este pequeño detalle. Lo preparé para ti y ojalá te haya sacado una sonrisa. ✨</p><div class="controles respuestas-finales"><button id="preguntaSi" class="boton">¡Sí, me encantó! 💗</button><button id="preguntaNo" class="boton claro">Está bonito 😊</button></div><p id="respuestaPregunta" aria-live="polite"></p></div>
+  </section>
+</main>
+<footer>Hecho con mucho cariño para Lia 🐵🐶💗</footer>
+<div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+</body>
+</html>
